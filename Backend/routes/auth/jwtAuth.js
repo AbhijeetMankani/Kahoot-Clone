@@ -4,11 +4,11 @@ const router = expressRouter();
 import bcrypt from "bcrypt";
 const saltRounds = 10;
 
-import pool from "../db.js";
+import pool from "../../db.js";
 
-import jwtGenerator from "../utils/jwtGenerator.js";
-import validInfo from "../middleware/validInfo.js";
-import authorization from "../middleware/authorization.js";
+import jwtGenerator from "../../utils/jwtGenerator.js";
+import validInfo from "../../middleware/validInfo.js";
+import authorization from "../../middleware/authorization.js";
 
 // Register
 router.post("/register", validInfo, async (req, res) => {
