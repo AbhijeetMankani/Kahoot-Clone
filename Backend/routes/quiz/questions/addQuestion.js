@@ -1,8 +1,8 @@
 import { Router as expressRouter } from "express";
 const router = expressRouter();
 
-import authorization from "../../middleware/authorization.js";
-import pool from "../../db.js";
+import authorization from "../../../middleware/authorization.js";
+import pool from "../../../db.js";
 router.post("/", authorization, async (req, res) => {
 	try {
 		const { quizId, question, options, correctOptionIndex } = req.body;
